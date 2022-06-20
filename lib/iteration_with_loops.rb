@@ -3,18 +3,15 @@ def find_even_values(src)
   #
   # Output all even values in each nested array
 
-  outerCount = 0
-  evenNumbers = []
+  row_index = 0
 
-  while outerCount < src.count do
-    innerCount = 0
-    while innerCount < src[outerCount].count do
-      p src[outerCount][innerCount] if src[outerCount][innerCount].even?
-    innerCount += 1
+  while row_index < src.count do
+    element_index = 0
+    while element_index < src[row_index].count do
+      p src[row_index][element_index] if src[row_index][element_index].even?
+      element_index += 1
     end
-    outerCount += 1
+    row_index += 1
   end
-
-  evenNumbers
   
 end
